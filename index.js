@@ -62,7 +62,6 @@ export function checkCashRegister(price, cash, cid) {
           // 32 Dimes we would have 3.2 < 3.1 = false
           // In this case we take only the amount
           // of reserves we have, in this case 3.1
-          // and leave the remainder for smaller units
           const cidFinalAmount = Decimal.mul(cidAmount, rate)
           const hasReserves = rateAmount < cidFinalAmount
           if(hasReserves) {
